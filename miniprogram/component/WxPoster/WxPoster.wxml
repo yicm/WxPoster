@@ -1,0 +1,37 @@
+<view class="swiper-container">
+  <swiper interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="_swiperChange" class="swiper">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item.eg_url}}" class="img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+ 
+  <view class="dots">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+
+  <view class="functions">
+    <view class="setting" bindtap='_onSettingTap'>分享设置</view>
+    <view class="column_line">|</view>
+    <view class="about" bindtap='_onAboutWxPosterTap'>关于插件</view>
+  </view>
+ 
+  <view class="generate {{show_aur_button?'hide':'show'}}" bindtap='_onStartGeneratePoster'>
+    开始生成分享海报
+  </view>
+  
+  <view class="btn_aur_box {{show_aur_button?'show':'hide'}}">
+    <button class="btn_aur" plain="false" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="_onGetUserInfo">授权获取您的头像</button>
+  </view>
+</view>
+
+<view class="WxModal">
+  <WxModal showModal="{{showSettingModal}}" bindsettingChange="_settingChange">> </WxModal>
+</view>
+
+<view>
+  <canvas style="width: {{canvas_width}}rpx; height: {{canvas_height}}rpx;position:fixed;left:1000rpx" canvas-id="poster_canvas"></canvas>
+</view>

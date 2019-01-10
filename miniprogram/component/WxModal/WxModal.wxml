@@ -1,0 +1,34 @@
+<!--custom Modal-->
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <view class="modal-content">
+    <form bindsubmit="onFromSubmit">
+      <view class="cell">
+        <view class="cell-bd">背景图片</view>
+        <view class="avatar_container">
+          <image wx:if="{{avatarTempPath == '' || avatarTempPath == 'undefined'}}" id='0' name="avatar" bindtap="onAvatarUpload" class="avatar" src="./images/avatar.png"> </image>
+          <image wx:else id='0' name="avatar" bindtap="onAvatarUpload" class="avatar" src="{{avatarTempPath}}"></image>
+        </view>
+      </view>
+      <view class="cell">
+        <view class="cell-bd">昵称</view>
+        <input name="nickname" class="cell-ft" maxlength="10" placeholder="请输入昵称(限10字)" value="{{nickname}}"/>
+      </view>
+      <view class="cell">
+        <view class="cell-bd">引导语</view>
+        <input name="slogan" class="cell-ft" maxlength="12" placeholder="长按识别，精彩在里" value="长按识别，精彩在里"/>
+      </view>
+      <view class="cell">
+        <view class="cell-bd">显示标题</view>
+        <switch class="cell-ft" checked bindchange="switchTitleChange"/>
+      </view>
+      <view class="cell">
+        <view class="cell-bd">文字[白/黑]色</view>
+        <switch class="cell-ft" checked bindchange="switchTextColorChange"/>
+      </view>
+      <view class="setting_save">
+        <button class="btn_save" form-type="submit">保存</button>
+      </view>
+    </form>
+  </view>
+</view>

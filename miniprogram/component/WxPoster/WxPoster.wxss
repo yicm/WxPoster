@@ -1,0 +1,100 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.swiper-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+}
+.swiper-container .swiper{
+  /* w = 720rpx, */
+  height: 960rpx;
+  width: 650rpx;
+}
+.swiper-container .swiper .img{
+  width: 100%;
+  height: 100%;
+}
+.swiper-container .dots{
+  width: 700rpx;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.swiper-container .dots .dot{
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  margin-top: 20rpx;
+  background: #D3D3D3;
+  border-radius: 8rpx;
+  transition: all .6s;
+}
+.swiper-container .dots .dot.active{
+  width: 24rpx;
+  background: #FF5746;
+}
+
+
+/*functons*/
+.swiper-container .functions{
+  display: flex;
+  flex-direction: row;
+  margin-top: 25rpx;
+}
+
+.functions .setting {
+  margin-right: 25rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: orange;
+}
+
+.functions .column_line {
+  color: #D3D3D3;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.functions .about {
+  margin-left: 25rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: orange;
+}
+/*generate*/
+.swiper-container .generate {
+  margin-top: 30rpx;
+  width: 650rpx;
+  border: green solid 5rpx;
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: green;
+}
+
+.btn_aur_box {
+  margin-top: 30rpx;
+  width: 650rpx;
+  padding-top: 12rpx;
+  text-align: center;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.btn_aur {
+  display: block;
+}

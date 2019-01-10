@@ -1,0 +1,84 @@
+/* for custom modal */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: rgba(236, 236, 236, 0.301);
+  align-items:center;
+}
+
+.modal-content {
+  position: fixed;
+  top: 28%;
+  left: 0;
+  z-index: 9500;
+  width: 550rpx;
+  height: 68%;
+  overflow: hidden;
+  padding: 50rpx 50rpx 50rpx;
+  background:white;
+  margin: -180rpx 70rpx;
+  border-radius: 2rpx;
+  align-items:center;
+}
+
+.cell {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 550rpx;
+  height: 145rpx;
+  font-size: 32rpx;
+  line-height: 145rpx;
+  border-bottom: #1F1F1F 1rpx solid;
+  background: white;
+}
+
+.avatar_container {
+
+}
+
+.avatar {
+  overflow:hidden;
+  display:block;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 300rpx 100rpx rgba(255, 255, 255, 0.2), 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.cell-bd {
+  text-align:left;
+  height: 100%;
+  color: #666666;
+}
+
+.cell:first-child::before {
+  display: none;
+}
+
+.cell-ft{
+  color: #1F1F1F;
+  margin-left: 10rpx;
+  text-align:right;
+  height: 100%;
+  font-weight: bold;
+}
+
+.setting_save {
+  margin-top: 40rpx;
+  align-items: center;
+  height: 80rpx;
+}
+
+.btn_save {
+  background-color: #FF5746;
+  color: white;
+  width: 450rpx;
+}
