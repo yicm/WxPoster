@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "yicm",
+  "license": "MIT",
   "dependencies": {
     "wx-server-sdk": "latest",
     "axios": "0.18.0",

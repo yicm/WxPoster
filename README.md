@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/WxPoster-V1.0.0-brightgreen.svg)
+
 # WxPoster
 
 `WxPoster`是一个微信小程序海报分享组件，使用简单，只需要将组件嵌入到想要分享的页面，传入页面路径和标题就可以生成漂亮的带小程序码的分享海报。
